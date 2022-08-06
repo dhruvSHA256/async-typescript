@@ -1,0 +1,43 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier",
+        "plugin:airbnb",
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "prettier",
+        "airbnb",
+    ],
+    "rules": {
+        "no-console": "off",
+        "consistent-return": 2,
+        "indent": [
+            1,
+            4
+        ],
+        "no-else-return": 1,
+        "semi": true,
+        "prefer-const": "error",
+        "space-unary-ops": 2,
+        "trailingComma": "all",
+        "semi": true,
+        "singleQuote": true,
+        "tabWidth": 4,
+        "printWidth": 80,
+    }
+}

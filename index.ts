@@ -1,6 +1,6 @@
-import fetch from 'node-fetch'
+import fetch from "node-fetch"
 
-const api = "https://pokeapi.co/api/v1/pokemon";
+const api = 'https://pokeapi.co/api/v1/pokemon';
 
 interface PokemonList {
     count: number;
@@ -26,17 +26,16 @@ interface Pokemon {
 }
 
 const getPokemonList = async (): Promise<PokemonList> => {
-    const listResp = await fetch(api)
-    return await listResp.json();
-}
+    const listResp = await fetch(api);
+    return listResp.json();
+};
 
 const getPokemon = async (url: string): Promise<Pokemon> => {
     const pokeResp = await fetch(url);
-    return await pokeResp.json();
-}
+    return pokeResp.json();
+};
 
-
-// diy promise
+// DIY promise
 // const getFirstPokemon = async (): Promise<Pokemon> => {
 //     return new Promise(async (resolve, reject) => {
 //         try {
@@ -48,7 +47,7 @@ const getPokemon = async (url: string): Promise<Pokemon> => {
 //     })
 // }
 
-(async function() {
+const main = async () => {
     try {
         const pokeList = await getPokemonList();
         for (const poke of pokeList.results) {
@@ -56,9 +55,9 @@ const getPokemon = async (url: string): Promise<Pokemon> => {
         }
         const pokemon = await getPokemon(pokeList.results[0].url);
         console.log(pokemon.name);
-    }
-    catch (err) {
+    } catch (err) {
         console.error(err);
     }
+};
 
-})()
+main();
