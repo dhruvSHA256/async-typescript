@@ -4,7 +4,7 @@
         "es2021": true
     },
     "extends": [
-        "airbnb",
+        "plugin:airbnb/base",
         "prettier"
     ],
     "parser": "@typescript-eslint/parser",
@@ -15,7 +15,7 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": [],
+    "plugins": ["import"],
     "rules": {
         "no-console": "off",
         "consistent-return": 2,
