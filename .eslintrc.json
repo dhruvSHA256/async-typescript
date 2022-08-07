@@ -4,10 +4,10 @@
         "es2021": true
     },
     "extends": [
+        "plugin:airbnb-base",
+        "plugin:prettier",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:prettier",
-        "plugin:airbnb",
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -18,10 +18,10 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react",
-        "@typescript-eslint",
         "prettier",
-        "airbnb",
+        "airbnb-base",
+        "@typescript-eslint",
+        "react",
     ],
     "rules": {
         "no-console": "off",
@@ -31,13 +31,7 @@
             4
         ],
         "no-else-return": 1,
-        "semi": true,
         "prefer-const": "error",
         "space-unary-ops": 2,
-        "trailingComma": "all",
-        "semi": true,
-        "singleQuote": true,
-        "tabWidth": 4,
-        "printWidth": 80,
     }
 }

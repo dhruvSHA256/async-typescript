@@ -1,31 +1,41 @@
 {
-  "name": "async-typescript",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "test": "jest"
-  },
-  "devDependencies": {
-    "@types/jest": "^27.0.1",
-    "@types/node-fetch": "^2.5.12",
-    "@typescript-eslint/eslint-plugin": "^5.32.0",
-    "@typescript-eslint/parser": "^5.32.0",
-    "eslint": "^8.21.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.30.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "jest": "^27.1.0",
-    "prettier": "^2.7.1",
-    "ts-jest": "^27.0.5",
-    "ts-node": "^10.2.1",
-    "typescript": "^4.4.2"
-  },
-  "dependencies": {
-    "@supercharge/promise-pool": "^1.7.0",
-    "node-fetch": "^2.6.1"
-  }
+    "name": "async-typescript",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "test": "jest",
+        "precommit": "lint-staged",
+    },
+    "devDependencies": {
+        "@types/jest": "^27.0.1",
+        "@types/node-fetch": "^2.5.12",
+        "@typescript-eslint/eslint-plugin": "^5.32.0",
+        "@typescript-eslint/parser": "^5.32.0",
+        "eslint": "^8.21.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jsx-a11y": "^6.6.1",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.30.1",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "husky": "^8.0.1",
+        "jest": "^27.1.0",
+        "lint-staged": "^13.0.3",
+        "prettier": "^2.7.1",
+        "ts-jest": "^27.0.5",
+        "ts-node": "^10.2.1",
+        "typescript": "^4.4.2"
+    },
+    "dependencies": {
+        "@supercharge/promise-pool": "^1.7.0",
+        "node-fetch": "^2.6.1"
+    },
+    "husky": {
+        "hooks": {
+            "precommit": "yarn precommit"
+        }
+    }
 }
