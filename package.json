@@ -4,8 +4,7 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "test": "jest",
-        "precommit": "lint-staged",
+        "precommit": "lint-staged"
     },
     "devDependencies": {
         "@types/jest": "^27.0.1",
