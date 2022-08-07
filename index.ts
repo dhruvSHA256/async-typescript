@@ -10,7 +10,7 @@ interface PokemonList {
         name: string;
         url: string;
     }[];
-}
+};
 
 interface Pokemon {
     id: number;
@@ -23,7 +23,7 @@ interface Pokemon {
             url: string;
         };
     }[];
-}
+};
 
 const getPokemonList = async (): Promise<PokemonList> => {
     const listResp = await fetch(api);
